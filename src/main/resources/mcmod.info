@@ -1,0 +1,16 @@
+[
+{
+  "modid": "iceologer",
+  "name": "Frozen Fiend",
+  "description": "Adds the iceologer from the mob vote",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["UnOriginal"],
+  "credits": "the_infamous_1 who made the code which I based on to make this mod, go check out his mod Ice Ice Baby for 1.16!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

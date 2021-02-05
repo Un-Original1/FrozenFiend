@@ -1,0 +1,73 @@
+{
+  "iceologer_ambient":
+  {
+    "subtitle": "subtitles.iceologer_ambient",
+    "category": "entity",
+    "sounds":
+    [
+      "iceologer:iceologer_ambient",
+      "iceologer:iceologer_ambient_2",
+      "iceologer:iceologer_ambient_3"
+    ]
+  },
+  "iceologer_hurt":
+  {
+    "subtitle": "subtitles.iceologer_hurt",
+    "category": "entity",
+    "sounds":
+    [
+      "iceologer:iceologer_hurt",
+      "iceologer:iceologer_hurt_2",
+      "iceologer:iceologer_hurt_3"
+    ]
+  },
+  "iceologer_death":
+  {
+    "subtitle": "subtitles.iceologer_death",
+    "category": "entity",
+    "sounds":
+    [
+      "iceologer:iceologer_death",
+      "iceologer:iceologer_death_2",
+      "iceologer:iceologer_death_3"
+    ]
+  },
+  "iceologer_cast_spell":
+  {
+    "subtitle": "subtitles.iceologer_cast_spell",
+    "category": "entity",
+    "sounds":
+    [
+      "iceologer:iceologer_cast_spell",
+      "iceologer:iceologer_cast_spell_2",
+      "iceologer:iceologer_cast_spell_3"
+    ]
+  },
+  "iceologer_prepare_spell":
+  {
+    "subtitle": "subtitles.iceologer_prepare_spell",
+    "category": "entity",
+    "sounds":
+    [
+      "iceologer:iceologer_prepare_spell"
+    ]
+  },
+  "ice_cube_hit":
+  {
+    "subtitle": "subtitles.ice_cube_hit",
+    "category": "entity",
+    "sounds":
+    [
+      "iceologer:ice_cube_hit"
+    ]
+  },
+  "ice_cube_ambient":
+  {
+    "subtitle": "subtitles.ice_cube_ambient",
+    "category": "entity",
+    "sounds":
+    [
+      "iceologer:ice_cube_ambient"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+#Item
+item.ice_wand.name=Varita de hielo
+#Mobs
+entity.Iceologer.name=Hielólogo
+entity.IceCube.name=Cubo de hielo
+#Tabs
+itemGroup.iceologertab=Frozen Fiend
+#Subtitle
+subtitles.iceologer_ambient=Hielólogo susurra
+subtitles.iceologer_hurt=Hielólogo herido
+subtitles.iceologer_death=Hielólogo muerto
+subtitles.iceologer_cast_spell=Hielólogo lanza hechizo
+subtitles.iceologer_prepare_spell=Cubo de hielo es conjurado
+subtitles.ice_cube_hit=Cubo de hielo golpea el suelo
+subtitles.ice_cube_ambient=Cubo de hielo levita
