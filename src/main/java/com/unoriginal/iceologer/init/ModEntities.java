@@ -19,8 +19,10 @@ public class ModEntities
 {
     public static void init() {
             int id = 1;
-            EntityRegistry.registerModEntity(new ResourceLocation(Main.MODID,"Iceologer"), EntityIceologer.class, "Iceologer", id++, Main.instance, 70, 3, true, 128, 14078143);
-            EntityRegistry.addSpawn(EntityIceologer.class, 10, 1, 1, EnumCreatureType.MONSTER, Biomes.FROZEN_RIVER, Biomes.FROZEN_OCEAN, Biomes.ICE_MOUNTAINS, Biomes.ICE_PLAINS, Biomes.MUTATED_ICE_FLATS, Biomes.EXTREME_HILLS, Biomes.EXTREME_HILLS_WITH_TREES, Biomes.MUTATED_EXTREME_HILLS, Biomes.MUTATED_EXTREME_HILLS_WITH_TREES, Biomes.MUTATED_TAIGA_COLD, Biomes.COLD_TAIGA, Biomes.COLD_TAIGA_HILLS, Biomes.COLD_BEACH);
+            if(ModConfig.isIceologerEnabled == true) {
+                EntityRegistry.registerModEntity(new ResourceLocation(Main.MODID, "Iceologer"), EntityIceologer.class, "Iceologer", id++, Main.instance, 70, 3, true, 128, 14078143);
+            }
+            EntityRegistry.addSpawn(EntityIceologer.class, ModConfig.iceologerSpawnProbability, 1, 1, EnumCreatureType.MONSTER, Biomes.FROZEN_RIVER, Biomes.FROZEN_OCEAN, Biomes.ICE_MOUNTAINS, Biomes.ICE_PLAINS, Biomes.MUTATED_ICE_FLATS, Biomes.EXTREME_HILLS, Biomes.EXTREME_HILLS_WITH_TREES, Biomes.MUTATED_EXTREME_HILLS, Biomes.MUTATED_EXTREME_HILLS_WITH_TREES, Biomes.MUTATED_TAIGA_COLD, Biomes.COLD_TAIGA, Biomes.COLD_TAIGA_HILLS, Biomes.COLD_BEACH);
             EntityRegistry.registerModEntity(new ResourceLocation(Main.MODID,"IceCube"), EntityIceCube.class, "IceCube", id++, Main.instance, 70, 3,true);
 
     }
