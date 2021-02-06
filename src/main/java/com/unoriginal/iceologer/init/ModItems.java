@@ -1,5 +1,6 @@
 package com.unoriginal.iceologer.init;
 
+import com.unoriginal.iceologer.config.ModConfig;
 import com.unoriginal.iceologer.item.IceWand;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -18,7 +19,9 @@ public class ModItems
     }
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().registerAll(ICE_WAND);
+        if(ModConfig.isIceWandEnabled == true) {
+            event.getRegistry().registerAll(ICE_WAND);
+        }
     }
     @SubscribeEvent
     public static void registerRenders(ModelRegistryEvent event) {
