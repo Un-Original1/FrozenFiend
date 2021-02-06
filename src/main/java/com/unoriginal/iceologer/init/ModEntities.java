@@ -2,6 +2,7 @@ package com.unoriginal.iceologer.init;
 
 
 import com.unoriginal.iceologer.Main;
+import com.unoriginal.iceologer.config.ModConfig;
 import com.unoriginal.iceologer.entity.Entity.EntityIceCube;
 import com.unoriginal.iceologer.entity.Entity.EntityIceologer;
 import com.unoriginal.iceologer.entity.render.RenderIceCube;
