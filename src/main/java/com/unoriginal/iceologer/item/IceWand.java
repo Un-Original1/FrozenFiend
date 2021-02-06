@@ -1,8 +1,8 @@
 package com.unoriginal.iceologer.item;
 
-import com.unoriginal.iceologer.Main;
 import com.unoriginal.iceologer.entity.Entity.EntityIceCube;
 import com.unoriginal.iceologer.init.ModSounds;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -16,7 +16,7 @@ public class IceWand extends Item {
     public IceWand(String name) {
         setRegistryName(name);
         setTranslationKey(name);
-        setCreativeTab(Main.iceologertab);
+        setCreativeTab(CreativeTabs.COMBAT);
         this.setMaxDamage(64);
         this.setMaxStackSize(1);
     }
@@ -40,4 +40,3 @@ public class IceWand extends Item {
         return EnumRarity.RARE;
     }
 }
-
