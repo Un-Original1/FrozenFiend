@@ -2,10 +2,12 @@ package com.unoriginal.iceologer.entity.model;
 // Made with Blockbench 3.7.5
 // Exported for Minecraft version 1.12
 
+import com.unoriginal.iceologer.entity.Entity.EntityIceologer;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelBox;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.AbstractIllager;
 import net.minecraft.util.EnumHandSide;
 import net.minecraft.util.math.MathHelper;
@@ -40,7 +42,7 @@ public class ModelIceologer extends ModelBase {
 		cape = new ModelRenderer(this);
 		cape.setRotationPoint(0.0F, -1.0F, 3.0F);
 		body.addChild(cape);
-		cape.cubeList.add(new ModelBox(cape, 99, 16, -4.5F, 0.0F, 0.0F, 9, 20, 1, 0.0F, false));
+		cape.cubeList.add(new ModelBox(cape, 99, 16, -4.5F, 1.0F, -1.0F, 9, 20, 1, 0.0F, false));
 
 		left_leg = new ModelRenderer(this);
 		left_leg.setRotationPoint(2.0F, 12.0F, 0.0F);
@@ -82,7 +84,7 @@ public class ModelIceologer extends ModelBase {
 		this.right_leg.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * 1.4F * limbSwingAmount * 0.5F;
 		this.left_leg.rotateAngleY = 0.0F;
 		this.right_leg.rotateAngleY = 0.0F;
-		this.cape.rotateAngleX = MathHelper.cos(0.6662F) * 1.6F * limbSwingAmount * 0.5F;
+		//this.cape.rotateAngleX = MathHelper.cos(0.6662F) * 1.6F * limbSwingAmount * 0.5F;
 		AbstractIllager.IllagerArmPose abstractillager$illagerarmpose = ((AbstractIllager)entityIn).getArmPose();
 		if(abstractillager$illagerarmpose == AbstractIllager.IllagerArmPose.CROSSED) {
 
@@ -105,6 +107,33 @@ public class ModelIceologer extends ModelBase {
 			this.right_arm.rotateAngleY = 0.0F;
 			this.left_arm.rotateAngleY = 0.0F;
 		}
+	}
+	@Override
+	public void setLivingAnimations(EntityLivingBase entityLivingBase, float limbSwing, float limbSwingAmount, float partialTickTime)
+	{
+		EntityIceologer iceologer = (EntityIceologer)entityLivingBase;
+		double d0 = iceologer.prevChasingPosX + (iceologer.chasingPosX - iceologer.prevChasingPosX) * partialTickTime - (iceologer.prevPosX + (iceologer.posX - iceologer.prevPosX) * partialTickTime);
+		double d1 = iceologer.prevPosY + (iceologer.chasingPosY - iceologer.prevChasingPosY) * partialTickTime - (iceologer.prevPosY + (iceologer.posY - iceologer.prevPosY) * partialTickTime);
+		double d2 = iceologer.prevChasingPosZ + (iceologer.chasingPosZ - iceologer.prevChasingPosZ) * partialTickTime - (iceologer.prevPosZ + (iceologer.posZ - iceologer.prevPosZ) * partialTickTime);
+		float f = iceologer.prevRenderYawOffset + (iceologer.renderYawOffset - iceologer.prevRenderYawOffset) * partialTickTime;
+		double d3 = MathHelper.sin(f * 0.017453292F);
+		double d4 = (-MathHelper.cos(f * 0.017453292F));
+		float f1 = (float) d1 * 10.0F;
+		f1 = MathHelper.clamp(f1, -6.0F, 32.0F);
+		float f2 = (float) (d0 * d3 + d2 * d4) * 100.0F;
+		f2 = MathHelper.clamp(f2, 0.0F, 150.0F);
+		float f3 = (float) (d0 * d4 - d2 * d3) * 100.0F;
+		f3 = MathHelper.clamp(f3, -20.0F, 20.0F);
+
+		float f4 = iceologer.prevRotationYaw + (iceologer.rotationYaw - iceologer.prevRotationYaw) * partialTickTime;
+		f1 = f1 + MathHelper.sin((iceologer.prevDistanceWalkedModified + (iceologer.distanceWalkedModified - iceologer.prevDistanceWalkedModified) * partialTickTime) * 6.0F) * 32.0F * f4;
+		if (iceologer.isSneaking())
+			f1 += 25.0F;
+
+		this.cape.rotateAngleX = (float) Math.toRadians(180F - (6.0F + f2 / 2.0F + f1));
+		this.cape.rotateAngleY = (float) Math.toRadians(f3 / 2.0F);
+		this.cape.rotateAngleZ = (float) Math.toRadians(180.0F - f3 / 2.0F);
+		super.setLivingAnimations(iceologer, limbSwing, limbSwingAmount, partialTickTime);
 	}
 	public ModelRenderer getArm(EnumHandSide p_191216_1_)
 	{
