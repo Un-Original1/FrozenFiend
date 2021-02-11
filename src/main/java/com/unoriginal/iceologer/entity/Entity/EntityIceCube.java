@@ -158,7 +158,7 @@ public class EntityIceCube extends Entity{
     }
     public void spawnIceExplosionCloud(){
         EntityAreaEffectCloud areaeffectcloudentity = new EntityAreaEffectCloud(this.world, this.posX, this.posY, this.posZ);
-        areaeffectcloudentity.setParticle(EnumParticleTypes.EXPLOSION_LARGE);
+        areaeffectcloudentity.setParticle(EnumParticleTypes.EXPLOSION_HUGE);
         areaeffectcloudentity.setRadius(3.0F);
         areaeffectcloudentity.setDuration(0);
         this.playSound(ModSounds.ICE_CUBE_HIT, 1.0F, 1.0F);
