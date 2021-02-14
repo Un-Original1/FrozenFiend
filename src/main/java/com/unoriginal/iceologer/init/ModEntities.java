@@ -10,6 +10,7 @@ import com.unoriginal.iceologer.entity.Entity.EntityIceologer;
 import com.unoriginal.iceologer.entity.render.RenderIceCube;
 import com.unoriginal.iceologer.entity.render.RenderIceologer;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.init.Biomes;
 import net.minecraft.util.ResourceLocation;
 
 import net.minecraft.world.biome.Biome;
