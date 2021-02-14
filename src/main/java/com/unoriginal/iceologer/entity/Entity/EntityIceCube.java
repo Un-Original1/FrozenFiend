@@ -20,9 +20,9 @@ import java.util.List;
 import java.util.UUID;
 
 public class EntityIceCube extends Entity{
-    private int floatTicks = 60;
+    private int floatTicks = ModConfig.iceCubeFloatTicks;
     public int fallTime = 0;
-    private float fallHurtAmount = 3.0F;
+    private float fallHurtAmount = ModConfig.iceCubeDamage;
     private EntityLivingBase caster;
     private UUID casterUuid;
     private EntityLivingBase target;
