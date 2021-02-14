@@ -37,6 +37,7 @@ public class ModEntities
                 }
             }
          EntityRegistry.addSpawn(EntityIceologer.class, ModConfig.iceologerSpawnProbability, ModConfig.iceologerMinSpawnGroup, odConfig.iceologerMaxSpawnGroup, EnumCreatureType.MONSTER, biomesAndTypes.get(BiomeDictionary.Type.SNOWY).toArray(new Biome[biomesAndTypes.get(BiomeDictionary.Type.SNOWY).size()]));
+         EntityRegistry.addSpawn(EntityIceologer.class, ModConfig.iceologerSpawnProbability, ModConfig.iceologerMinSpawnGroup, ModConfig.iceologerMaxSpawnGroup, EnumCreatureType.MONSTER, Biomes.EXTREME_HILLS, Biomes.MUTATED_EXTREME_HILLS, Biomes.EXTREME_HILLS_WITH_TREES, Biomes.MUTATED_EXTREME_HILLS_WITH_TREES);
          EntityRegistry.registerModEntity(new ResourceLocation(Main.MODID,"IceCube"), EntityIceCube.class, "IceCube", id++, Main.instance, 70, 3,true);
 
     }
