@@ -15,6 +15,8 @@ public class ModConfig {
     public static int iceologerSpawnProbability = 5;
     public static int iceologerMinSpawnGroup= 1;
     public static int iceologerMaxSpawnGroup= 1;
+    public static float iceCubeDamage = 3.0F;
+    public static int iceCubeFloatTicks= 60;
 
     private static final String CATEGORY_GENERAL = "general";
     public static void readConfig() {
@@ -39,5 +41,7 @@ public class ModConfig {
         iceologerSpawnProbability = cfg.getInt("iceologerSpawnProbability", CATEGORY_GENERAL, iceologerSpawnProbability, 0, 100, "Change the spawn rate of iceologer, 0 to disable it and 100 to make them as common as a zombie");
         iceologerMinSpawnGroup = cfg.getInt("iceologerMinSpawnGroup", CATEGORY_GENERAL, iceologerMinSpawnGroup, 1, 3, "Change the minimum of iceologers spawned in a group");
         iceologerMaxSpawnGroup = cfg.getInt("iceologerMaxSpawnGroup", CATEGORY_GENERAL, iceologerMaxSpawnGroup, 1, 3, "Change the maximum of iceologers spawned in a group");
+        iceCubeDamage = cfg.getFloat("iceCubeDamage", CATEGORY_GENERAL, iceCubeDamage, 0.0F, 20.0F, "Change the damage made by the iceologer and ice wand");
+        iceCubeFloatTicks = cfg.getInt("iceCubeFloatTicks", CATEGORY_GENERAL, iceCubeFloatTicks, 30, 800, "Change the time the ice cube can float above its target");
     }
 }
