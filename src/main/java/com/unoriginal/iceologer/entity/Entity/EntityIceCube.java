@@ -1,6 +1,7 @@
 package com.unoriginal.iceologer.entity.Entity;
 
 
+import com.unoriginal.iceologer.config.ModConfig;
 import com.unoriginal.iceologer.init.ModSounds;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.*;
