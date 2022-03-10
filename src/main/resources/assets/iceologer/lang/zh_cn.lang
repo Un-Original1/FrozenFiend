@@ -1,0 +1,15 @@
+#Item
+item.ice_wand.name=寒冰魔杖
+#Mobs
+entity.Iceologer.name=冰术师
+entity.IceCube.name=冰云
+#Tabs
+itemGroup.iceologertab=冰术师
+#Subtitle
+subtitles.iceologer_ambient=冰术师 低语
+subtitles.iceologer_hurt=冰术师 受伤
+subtitles.iceologer_death=冰术师 死亡
+subtitles.iceologer_cast_spell=冰术师 施法
+subtitles.iceologer_prepare_spell=冰云 召唤出来
+subtitles.ice_cube_hit=冰云 打击地面
+subtitles.ice_cube_ambient=冰云 浮空
